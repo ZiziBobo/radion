@@ -3,6 +3,14 @@ html {
   font-size: clamp(16px, 1.2vw + 1px, 18px);
 }
 
+.highlight {
+  background-color: #007BFF;  /* 蓝色背景（Bootstrap 蓝） */
+  color: white;               /* 白色字体 */
+  padding: 0px 2px;           /* 适当内边距 */
+  border-radius: 4px;         /* 圆角边框 */
+  font-weight: 500;           /* 稍微加粗文字 */
+}
+
 * {
   box-sizing: border-box;
   text-rendering: geometricPrecision
@@ -13,12 +21,17 @@ body {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "Maple Mono NF CN Regular";
+  src: url("fonts/MapleMono-NF-CN-Regular.ttf");
+}
+
 body {
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
   font-family:
-    'JetBrains Mono', Menlo, Monaco, Lucida Console, Liberation Mono,
+    "Maple Mono NF CN Regular"，'JetBrains Mono', Menlo, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
     monospace, serif;
   word-wrap: break-word;
@@ -44,6 +57,11 @@ article[itemprop="articleBody"] {
     margin-top: 3rem !important;
     font-size: 1.2rem !important;
   }
+}
+
+article img{
+  display: block;
+  margin: 0 auto;
 }
 
 fieldset {
@@ -534,7 +552,6 @@ a.zola-anchor:hover {
 }
 
 .hack code {
-
   &:before,
   &:after {
     content: none;
